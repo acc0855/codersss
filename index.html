@@ -175,6 +175,7 @@
 
         </div>
     </div>
+  <button id="showNotification">Show Notification</button>
     <div class="overlay-tex">
         <button id="btn1">Contact</button>
     </div>
@@ -329,6 +330,39 @@
             }, 3000)
         }
         setInterval(hell, 1000)
+// Check if the browser supports the Web Notifications API
+if ('Notification' in window) {
+  // Request permission to show notifications
+  Notification.requestPermission().then(permission => {
+    if (permission === 'granted') {
+      // Permission granted, handle notifications
+      const showNotificationButton = document.getElementById('showNotification');
+      showNotificationButton.addEventListener('click', () => {
+        showNotification();
+      });
+    } else {
+      console.log('Notification permission denied');
+    }
+  });
+} else {
+  console.log('Web Notifications API is not supported in this browser');
+}
+
+// Function to show a notification
+function showNotification() {
+  const options = {
+    body: 'This is the notification body.',
+    icon: 'icon.png'
+  };
+
+  // Create a new notification
+  const notification = new Notification('Notification Title', options);
+
+  // Handle clicks on the notification
+  notification.onclick = () => {
+    console.log('Notification clicked');
+  };
+}
 
         a.addEventListener("click", () => {
             window.location.href = "https://acc0855.github.io/page2/";
