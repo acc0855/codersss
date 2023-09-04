@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="https://img.icons8.com/?size=512&id=tVovXEFVAsUk&format=png" type="image/x-icon">
     <title>coder.com</title>
     <style>
@@ -147,6 +148,8 @@
             width: 100%;
             border-color: rgb(109, 195, 11);
         }
+       
+        
 
         .randi {
             text-align: center;
@@ -157,6 +160,8 @@
             position: fixed;
             bottom: 0%;
         }
+       
+  
 
         .card {
             border-radius: 10px;
@@ -164,11 +169,31 @@
             overflow: hidden;
             /* Hide content that goes beyond the rounded corners */
         }
-    
+
 /* Apply to other elements as needed */
 .overlay-{
     font-family: "Trebuchet MS", sans-serif;
 }
+button {
+    padding: 7px 15px;
+    font-size: 10px;
+    background-color: #dc6f15bb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.overlay- {
+            font-family: "Rockwell", sans-serif;
+        }
+
+        /* Change the font for a specific element with an ID */
+        #customFont {
+            font-family: "Rockwell", sans-serif;
+        }
+        /* ////////////////////////// */
+        
     </style>
 </head>
 
@@ -188,7 +213,7 @@
         <button id="btn1">Contact</button>
     </div>
     <div class="overlay-te">
-        <button id="btn2">Developer Information</button>
+        <button id="btn2" >Developer Information</button>
     </div>
     <div class="overlay">
         <button id="B">C++</button>
@@ -204,8 +229,10 @@
     </div>
     
     <hr class="overlay-line">
+    <hr class="overlay-lin">
+    <hr class="overlay-li">
     <div class="card"
-        style="position: absolute; left: 1%; top: 65%; transform: translateY(-50%); max-width: 18rem; background-color: white; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        style="position: absolute; left: 1%; top: 65%; transform: translateY(-50%); max-width: 18rem; background-color: rgb(227, 119, 61); border-radius: 10px; box-shadow: 0 5px 5px rgb(255, 248, 0);">
         <img class="card" src="https://i.ytimg.com/vi/WuXnbwEQd94/maxresdefault.jpg" alt="Card image" height="162">
         <div class="card-body">
             <h5 class="card-title">JAVA COURSE</h5>
@@ -216,7 +243,7 @@
     </div>
     </div>
     <div class="card"
-        style="position: absolute; left: 42%; top: 65%; transform: translateY(-50%); max-width: 18rem; background-color: white; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        style="position: absolute; left: 42%; top: 65%; transform: translateY(-50%); max-width: 18rem; background-color: rgb(15, 239, 186); border-radius: 10px; box-shadow: 0 5px 5px rgb(254, 246, 12);">
         <img class="card" src="https://i.ytimg.com/vi/32jPsN3C9cw/maxresdefault.jpg" alt="Card image" height="162">
         <div class="card-body">
             <h5 class="card-title">C++ COURSE</h5>
@@ -226,7 +253,7 @@
         </div>
     </div>
     <div class="card"
-        style="position: absolute; left: 80%; top: 65%; transform: translateY(-50%); max-width: 18rem; background-color: white; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        style="position: absolute; left: 80%; top: 65%; transform: translateY(-50%); max-width: 18rem; background-color: rgb(173, 10, 233); border-radius: 10px; box-shadow: 0 5px 5px rgb(234, 255, 3);">
         <img class="card" src="https://i.ytimg.com/vi/jS4aFq5-91M/maxresdefault.jpg" alt="Card image" height="162">
         <div class="card-body">
             <h5 class="card-title">JAVA SCRIPT COURSE</h5>
@@ -241,6 +268,7 @@
     </div>
     <div class="overlay-">
         <h1>2nd Info All Coding Languages</h1>
+        <hr id="hh">
     </div>
     <div class="randi">
         <p id="p">Made By Parampreet Singh |||| Copyright © 2023 Coders.com</p>
@@ -255,23 +283,37 @@
     <div class="time">
         <small>
             <p id="p1">00</p>
+            <hr id="aa">
         </small>
     </div>
     <div class="tim">
         <small>
             <p id="p2">00</p>
+            <DIV id="nn">
+            <hr>
+        </DIV>
         </small>
     </div>
     <div class="ti">
         <small>
             <p id="p3">00</p>
+            <hr id="tt">
         </small>
     </div>
     <div class="t">
         <small>
             <p id="p4">00</p>
+            <hr id="ii">
         </small>
     </div>
+    <div class="cube">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face right">Right</div>
+        <div class="face left">Left</div>
+        <div class="face top">Top</div>
+        <div class="face bottom">Bottom</div>
+      </div>
     <script>
 
         let a = document.getElementById("btn1");
@@ -288,20 +330,37 @@
         let j = document.getElementById("T");
         let k = document.getElementById("N");
         let l = document.getElementById("SS");
-        I.style.color = "red";
-        j.style.color = "red";
-        k.style.color = "red";
+        let M = document.getElementById("hh");
+        let N = document.getElementById("aa");
+        let O = document.getElementById("nn");
+        let P = document.getElementById("tt");
+        let Q = document.getElementById("ii");
+
+        hh.style.color  = "yellow";
+        nn.style.color  = "yellow";
+        O.style.color  = "yellow";
+        P.style.color  = "red";
+        Q.style.color  = "yellow";
+        I.style.color = "white";
+        j.style.color = "white";
+        k.style.color = "white";
+        // btn1.style.backgroundColor = "blue"
+        // btn2.style.backgroundColor = "blue"
+        // SS.style.backgroundColor = "blue"
+        // I.style.backgroundColor = "blue"
+        // j.style.backgroundColor = "blue"
+        // k.style.backgroundColor = "blue"
         h1.style.backgroundColor = "blue"
         h2.style.backgroundColor = "blue"
         h3.style.backgroundColor = "blue"
         h1.style.color = "green";
         h2.style.color = "cyan";
         h3.style.color = "yellow";
-        SS.style.color = "red"
+        SS.style.color = "white"
        
         const button = document.getElementById("myButton");
-        b.style.color = "red";
-        a.style.color = "red";
+        b.style.color = "white";
+        a.style.color = "white";
         function time() {
 
             setTimeout(() => {
@@ -366,7 +425,7 @@ if ('Notification' in window) {
 function showNotification() {
   const options = {
     body: 'hello welcome in shanti website',
-    icon: "C:\Users\08-1infO22-17\Downloads\icons8-favicon-64.png"
+    icon: "C:\\Users\\08-1infO22-17\\Downloads\\icons8-favicon-64.png"
   };
 
   // Create a new notification
@@ -424,7 +483,9 @@ play()
             window.location.href = "https://acc0855.github.io/page6/";
         });
     </script>
-</body>
+    </body>
+
+    </html>
 
 
-</html>
+
