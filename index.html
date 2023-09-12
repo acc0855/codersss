@@ -183,15 +183,39 @@ button {
     margin: 5px;
 }
 .overlay- {
-            font-family: "Rockwell", sans-serif;
+            font-family: "Gilgan", sans-serif;
         }
 
         /* Change the font for a specific element with an ID */
         #customFont {
-            font-family: "Rockwell", sans-serif;
+            font-family: "Gilgan", sans-serif;
         }
         /* ////////////////////////// */
-        
+        .circle-button{
+            position: absolute;
+            top: 4%;
+            left: 11%;
+            transform: translate(-50%, -50%);
+            color: rgba(117, 13, 13, 0);
+            font-size: 24px;
+            text-align: center;
+        }
+        .circle-button {
+    width: 40px; /* Set the width and height to be the same for a perfect circle */
+    height: 30px;
+    border-radius: 50%; /* This property makes the button circular */
+    background-color: #ffffff; /* Change the background color to your desired color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Optional: Add hover effect */
+.circle-button:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+        /* ///////////////////////////////? */
     </style>
 </head>
 
@@ -206,6 +230,12 @@ button {
 
         </div>
     </div>
+    <!-- /////////////////////// -->
+    
+        <button class="circle-button" id = "btn00">P</button>
+   
+    
+    <!-- ////////////////////////////////////// -->
   <button id="showNotification">Show Notification</button>
     <div class="overlay-tex">
         <button id="btn1">Contact</button>
@@ -333,7 +363,24 @@ button {
         let O = document.getElementById("nn");
         let P = document.getElementById("tt");
         let Q = document.getElementById("ii");
+        //////////////////////////////////////////
+        // private room system 
+        let QQQ = document.getElementById("btn00");
+            QQQ.style .backgroundColor = "white";
+            QQQ.style .color = "red";
+            QQQ.addEventListener('click'  , ()=> 
+            {
+                let code = prompt("Enter Password To Access Developer Room");
+                if (code == "999" || code == "sara"){
+                    window.location.href = "https://acc0855.github.io/proom/";
+                }
+                else{
+                    alert("WRONG Password Please Do No Try");
+                }
+            })
 
+
+            ////////////////////////////////////////////////////
         hh.style.color  = "yellow";
         nn.style.color  = "yellow";
         O.style.color  = "yellow";
@@ -481,7 +528,6 @@ play()
             window.location.href = "https://acc0855.github.io/page6/";
         });
     </script>
-
     </body>
     </html>
 
