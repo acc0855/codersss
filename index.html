@@ -243,6 +243,17 @@
       text-align: center;
     }
 
+    .newbt {
+      position: absolute;
+      top: 70%;
+      left: 2%;
+      transform: translate(-50%, -50%);
+      color: #CCCCCC; /* Light Gray */
+
+      font-size: 24px;
+      text-align: center;
+    }
+
     /* ///////////////////////////////? */
     #lol{
 
@@ -329,7 +340,7 @@
 #btn1:hover {
   transform: translateY(-5px); /* Move the button 5 pixels up on hover */
 }
-    
+   
   </style>
 </head>
 
@@ -372,6 +383,7 @@
   <div class="newbtn">
     <button id="lol">FOR FUN</button>
   </div>
+ 
 
   <hr class="overlay-line">
   <hr class="overlay-lin">
@@ -422,7 +434,9 @@
   </div>
   <div class="randi">
     <p id="p">Made By Parampreet Singh |||| Copyright © 2023 Coders.com</p>
-
+    <div class="newbt">
+      <button id="lolL">REC.</button>
+    </div>
   </div>
   <div class="px-6 md:my-11 lg:my-0 md:h-72 lg:h-64 lg:py-4 xl:h-52">
     <span class="tracking-widest text-xs title-font font-medium mb-1 dark:text-gray-400">FREE COURSE</span>
@@ -465,7 +479,7 @@
     <div class="face bottom">Bottom</div>
   </div>
   <script>
-  
+
    let lol = document.getElementById("lol");
     let a = document.getElementById("btn1");
     let b = document.getElementById("btn2");
@@ -486,11 +500,35 @@
     let O = document.getElementById("nn");
     let P = document.getElementById("tt");
     let Q = document.getElementById("ii");
-    /////////////////////////////////////////////////
+     let QQ = document.getElementById("loll");
+    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+
+        // Handle the recognized speech
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            console.log(`Recognized: ${transcript}`);
+        };
+
+        // Make sure you have an HTML element with the id "loll" to add the click event listener to.
+        const loll = document.getElementById('lolL');
+
+        if (loll) {
+            loll.addEventListener('click', () => {
+                recognition.start();
+            });
+        } else {
+            console.error("Element with id 'loll' not found in the HTML.");
+        }
+    } else {
+        console.error("Speech recognition is not supported in this browser.");
+    }
+
       btnc.style.color = "red";
     lol.addEventListener('mouseover', () => {
   lol.style.color = "cyan";
- 
+
 });
     lol.addEventListener('mouseout', ()=> {
      lol.style.color = "white";
@@ -498,52 +536,52 @@
 
       SS.addEventListener('mouseover', () => {
   SS.style.color = "cyan";
- 
+
 });
     SS.addEventListener('mouseout', ()=> {
      SS.style.color = "white";
     });
       N.addEventListener('mouseover', () => {
   N.style.color = "cyan";
- 
+
 });
     N.addEventListener('mouseout', ()=> {
      N.style.color = "white";
     });
       T.addEventListener('mouseover', () => {
   T.style.color = "cyan";
- 
+
 });
     T.addEventListener('mouseout', ()=> {
      T.style.color = "white";
     });
       B.addEventListener('mouseover', () => {
   B.style.color = "cyan";
- 
+
 });
     B.addEventListener('mouseout', ()=> {
      B.style.color = "white";
     });
        btn2.addEventListener('mouseover', () => {
   btn2.style.color = "cyan";
- 
+
 });
     btn2.addEventListener('mouseout', ()=> {
      btn2.style.color = "white";
     });
        btn1.addEventListener('mouseover', () => {
   btn1.style.color = "cyan";
- 
+
 });
     btn1.addEventListener('mouseout', ()=> {
     btn1.style.color = "white";
     });
-    
-    
 
 
-   
-   
+
+
+
+
     /////////////////////////////////////////////////////
     //////////////////////////////////////////
     // private room system 
