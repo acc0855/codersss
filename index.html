@@ -232,16 +232,39 @@
       background-color: #0056b3;
       /* Change the background color on hover */
     }
-
-    .newbtn {
-      position: absolute;
-      top: 5%;
-      left: 43%;
-      transform: translate(-50%, -50%);
-      color: rgb(255, 255, 255);
-      font-size: 24px;
-      text-align: center;
+    .newb button {
+        background-color: purple;
+        color: white; /* Text color */
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
     }
+    
+    .newb button {
+        background-color: purple;
+        color: white; /* Text color */
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .newbt button {
+        background-color: purple;
+        color: white; /* Text color */
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+   
+   
+    .newb button {
+        background-color: purple;
+        color: white; /* Text color */
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+   
+
 
     .newbt {
       position: absolute;
@@ -253,6 +276,87 @@
       font-size: 24px;
       text-align: center;
     }
+    .newb {
+        position: absolute;
+        top: 70%;
+        left: 95.2%;
+        transform: translate(-50%, -50%);
+        color: gray; /* Light Gray */
+        font-size: 24px;
+        text-align: center;
+    }
+
+    element.style {
+        color: white;
+    }
+    #lol {
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    button {
+        padding: 7px 15px;
+        font-size: 10px;
+        background-color: #dc6f15bb;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    user agent stylesheet
+    button {
+        appearance: auto;
+        font-style: ;
+        font-variant-ligatures: ;
+        font-variant-caps: ;
+        font-variant-numeric: ;
+        font-variant-east-asian: ;
+        font-variant-alternates: ;
+        font-variant-position: ;
+        font-weight: ;
+        font-stretch: ;
+        font-size: ;
+        font-family: ;
+        font-optical-sizing: ;
+        font-kerning: ;
+        font-feature-settings: ;
+        font-variation-settings: ;
+        text-rendering: auto;
+        color: buttontext;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        box-sizing: border-box;
+        background-color: buttonface;
+        writing-mode: horizontal-tb !important;
+        margin: 0em;
+        padding-block: 1px;
+        padding-inline: 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonborder;
+        border-image: initial;
+    }
+    .newbtn {
+        position: absolute;
+        top: 5%;
+        left: 43%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        text-align: center;
+    }
+
 
     /* ///////////////////////////////? */
     #lol{
@@ -384,6 +488,7 @@
     <button id="lol">FOR FUN</button>
   </div>
  
+ 
 
   <hr class="overlay-line">
   <hr class="overlay-lin">
@@ -436,6 +541,9 @@
     <p id="p">Made By Parampreet Singh |||| Copyright © 2023 Coders.com</p>
     <div class="newbt">
       <button id="lolL">REC.</button>
+    </div>
+    <div class="newb">
+      <button id="lot">WAL.</button>
     </div>
   </div>
   <div class="px-6 md:my-11 lg:my-0 md:h-72 lg:h-64 lg:py-4 xl:h-52">
@@ -501,6 +609,8 @@
     let P = document.getElementById("tt");
     let Q = document.getElementById("ii");
      let QQ = document.getElementById("loll");
+   
+  
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
         recognition.lang = 'en-US';
@@ -512,8 +622,20 @@
         };
 
         // Make sure you have an HTML element with the id "loll" to add the click event listener to.
+      const RRR = document.getElementById("lot");
         const loll = document.getElementById('lolL');
-
+loll.addEventListener('mouseover' , ()=>{
+  loll.style.backgroundColor = "red"
+});
+      loll.addEventListener('mouseout' , ()=>{
+        loll.style.backgroundColor = "purple"
+      });
+RRR.addEventListener('mouseover' , ()=>{
+        RRR.style.backgroundColor = "red"
+      });
+            RRR.addEventListener('mouseout' , ()=>{
+              RRR.style.backgroundColor = "purple"
+            });
         if (loll) {
             loll.addEventListener('click', () => {
                 recognition.start();
